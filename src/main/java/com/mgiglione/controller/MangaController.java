@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mgiglione.model.Manga;
+import com.github.Doomsdayrs.Jikan4java.types.Main.Manga.Manga;
 import com.mgiglione.service.MangaService;
 
 @RestController

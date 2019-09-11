@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.mgiglione.model.Manga;
+import com.github.Doomsdayrs.Jikan4java.types.Main.Manga.Manga;
 import com.mgiglione.service.MangaService;
 
 @RunWith(SpringRunner.class)

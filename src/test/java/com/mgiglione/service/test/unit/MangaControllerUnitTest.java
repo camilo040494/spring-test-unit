@@ -26,8 +26,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.web.context.WebApplicationContext;
 
+import com.github.Doomsdayrs.Jikan4java.types.Main.Manga.Manga;
 import com.mgiglione.controller.MangaController;
-import com.mgiglione.model.Manga;
 import com.mgiglione.service.MangaService;
 
 @SpringBootTest
@@ -55,14 +55,13 @@ public class MangaControllerUnitTest {
         this.mockMvc = standaloneSetup(this.mangaController).build();// Standalone context
         // mockMvc = MockMvcBuilders.webAppContextSetup(wac)
         // .build();
-        Manga manga1 = Manga.builder()
-            .title("Hokuto no ken")
-            .description("The year is 199X. The Earth has been devastated by nuclear war...")
-            .build();
-        Manga manga2 = Manga.builder()
-            .title("Yumekui Kenbun")
-            .description("For those who suffer nightmares, help awaits at the Ginseikan Tea House, where patrons can order much more than just Darjeeling. Hiruko is a special kind of a private investigator. He's a dream eater....")
-            .build();
+        Manga manga1 = new Manga();
+        manga1.title = "Hokuto no ken";
+        manga1.synopsis = "The year is 199X. The Earth has been devastated by nuclear war...";
+        
+        Manga manga2 = new Manga();
+        manga2.title = "Yumekui Kenbun";
+        manga2.synopsis = "For those who suffer nightmares, help awaits at the Ginseikan Tea House, where patrons can order much more than just Darjeeling. Hiruko is a special kind of a private investigator. He's a dream eater....";
 
         mangas = new ArrayList<>();
         mangas.add(manga1);
